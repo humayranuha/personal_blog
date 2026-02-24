@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $role = $_POST['role'];
 
     session_start();
-    $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', $'password', '$role')";
+    $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')";
     $result = mysqli_query($conn, $sql);
     if(!$result) {
         echo "Error: " . mysqli_error($conn);
